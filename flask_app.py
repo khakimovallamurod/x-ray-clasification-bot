@@ -9,6 +9,7 @@ from test_model import image_classification
 TOKEN = get_token()
 bot = Bot(TOKEN)
 app = Flask(__name__)
+url = 'https://codeschoolacademy.pythonanywhere.com/'
 
 @app.route('/', methods=['POST'])  
 def main():
@@ -27,7 +28,8 @@ def main():
     else:
         bot.send_message(
             chat_id = user['id'],
-            text=f'Please {user["first_name"]} send me the photo. My function works based on the following buttons.',
+            text=f'Please {user["first_name"]} send me the photo. My function below only works on images',
             )
+        
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8000, debug=True)
