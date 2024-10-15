@@ -30,7 +30,7 @@ async def covid_classification(update: Update, context: CallbackContext):
             )
     else:
         await update.message.reply_text(
-            text="❌ Siz yuborgan rasm ko'krak qafasi emas. Qaytadan tasvir yuborib tekshirib ko'ring."
+            text=f"❌ Siz yuborgan rasm ko'krak qafasi emas. Qaytadan tasvir yuborib tekshirib ko'ring.{response}"
         )
     
 async def type_clasification(update: Update, context: CallbackContext):
