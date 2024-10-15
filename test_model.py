@@ -7,4 +7,3 @@ def image_classification(url, file_data):
     image_data = response.json()
     return image_data
 
-
