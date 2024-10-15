@@ -22,7 +22,7 @@ async def covid_classification(update: Update, context: CallbackContext):
     classification_url = 'http://149.28.56.114/onlychest'
     
     response = image_classification(url=classification_url, file_data=file_data)
-    if round(response[1]['confidence']) == 1:
+    if response[1]['confidence'] >= 0.5:
         context.user_data['photo'] = file_id
         await update.message.reply_text(
             text='Chest image ✅. Select the type of image classification',
