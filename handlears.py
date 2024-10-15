@@ -1,7 +1,6 @@
 from telegram import Update
 from telegram.ext import CallbackContext
 from test_model import image_classification
-from PIL import Image
 import keyboards
 
 
